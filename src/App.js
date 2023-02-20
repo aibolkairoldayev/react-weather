@@ -26,7 +26,7 @@ function App() {
   });
 
   React.useEffect(() => {
-    fetch('http://api.weatherapi.com/v1/current.json?key=eb9a14ce1f944c0594f40638231601&q=Almaty')
+    fetch('http://api.weatherapi.com/v1/current.json?key=9eff465551ce4096b72111128230202&q=Almaty')
       .then((res) => res.json())
       .then((json) => {
         setWeather(json.current.temp_c);
@@ -82,7 +82,6 @@ function App() {
           else {
             return null
           }
-
         })
       })
       .catch((err) => {
@@ -90,7 +89,6 @@ function App() {
         alert("Could not to get data")
       });
   }, [weather]);
-
 
   return (
     <div className="App">
@@ -109,7 +107,7 @@ function App() {
         </div>
         <div className="time">
           {icon == null ? '' : <img src={icon} alt="icon" />}
-          {date.toLocaleTimeString('it-IT').substring(0, 5)}
+          {date.toLocaleTimeString('it-IT').substring(0, 2)}<b>:</b>{date.toLocaleTimeString('it-IT').substring(3, 5)}
         </div>
         <div className="weather">
           <p>Алматы</p>

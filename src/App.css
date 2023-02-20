@@ -1,14 +1,13 @@
 .header {
     display: flex;
     justify-content: space-between;
-    height: 120px;
+    height: 200px;
     align-items: center;
     background-color: #0c5252;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
     color: #fff;
-    padding: 10px;
 }
 
 .weather {
@@ -17,45 +16,189 @@
     justify-content: end;
     margin-top: -20px;
     text-align: center;
+    padding: 10px;
 }
 
 .weather p {
     padding: 0;
     margin: 0;
+    font-size: 35px;
 }
 
 .weather b {
-    font-size: 50px;
+    font-size: 90px;
     font-weight: 400;
     line-height: 80%;
     -webkit-text-stroke: .5px #000;
 }
 
 .time img {
-    width: 40px;
+    width: 70px;
     position: absolute;
-    top: -26px;
-    right: 38px;
+    top: -40px;
+    right: 86px;
 }
 
 .date {
     margin-top: -20px;
+    padding: 10px;
 }
 
 .date p {
     margin: 0;
+    font-size: 35px;
 }
 .date b {
-    font-size: 50px;
+    font-size: 90px;
     line-height: 80%;
     font-weight: 400;
     -webkit-text-stroke: .5px #000;
 }
 
 .time {
-    font-size: 50px;
-    margin-right: -40px;
+    font-size: 90px;
+    margin-right: -80px;
     position: absolute;
-    right: 48%;
-    -webkit-text-stroke: 1px #b7b2b2
+    right: 47%;
+    -webkit-text-stroke: .5px #000;
+    padding: 10px;
+}
+.time b {
+    -webkit-animation: blink2 1s linear infinite;
+    -webkit-text-stroke: 0.5px #000;
+  animation: blink2 1s linear infinite;
+  font-weight: 200;
+}
+
+@-webkit-keyframes blink2 {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes blink2 {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+
+@media (max-width:480px) {
+    .header {
+        height: 120px;
+    }
+    .date b {
+        font-size: 50px;
+    }
+    .date p {
+        font-size: 20px;
+    }
+    .time {
+        font-size: 50px;
+        margin-right: -40px;
+        right: 43%;
+    }
+    .weather b {
+        font-size: 50px;
+    }
+    .weather p {
+        font-size: 20px;
+    }
+    .time img {
+        width: 40px;
+        top: -20px;
+        right: 53px;
+    }
+}
+
+@media (max-width:400px) {
+    .header {
+        height: 90px;
+        align-items: end;
+    }
+    .date b {
+        font-size: 45px;
+    }
+    .date p {
+        font-size: 17px;
+    }
+    .time {
+        font-size: 45px;
+    }
+    .time img {
+        top: -23px;
+        right: 46px;
+    }
+    .weather b {
+        font-size: 45px;
+    }
+    .weather p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width:256px) {
+    .header {
+        height: 56px;
+        align-items: end;
+    }
+    .date {
+        padding: 10px 4px 4px 10px;
+    }
+    .date b {
+        font-size: 30px;
+    }
+    .date p {
+        font-size: 13px;
+    }
+    .time {
+        font-size: 30px;
+        padding: 10px 4px 4px 4px;
+        right: 49%;
+    }
+    .time img {
+        top: -11px;
+        right: 25px;
+        width: 27px;
+    }
+    .weather {
+        padding: 10px 10px 4px 4px;
+    }
+    .weather b {
+        font-size: 30px;
+    }
+    .weather p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:200px) {
+    .header {
+        height: 44px;
+    }
+    .date b {
+        font-size: 20px;
+    }
+    .date p {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .time {
+        font-size: 20px;
+        right: 56%;
+    }
+    .time img {
+        top: -7px;
+        right: 19px;
+        width: 20px;
+    }
+    .weather b {
+        font-size: 20px;
+    }
+    .weather p {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}
+
+@media (max-width:200px) {
+    .header {
+        height: 42px;
+    }
 }
